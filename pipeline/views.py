@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from pipeline.models import RegisteredUsersForms, RegisteredUsers
 
-
+# This is the index function which helps 
+# you to add more members in the list.
 def index(request):
     '''Index page to register user'''
     if request.method == 'POST':
