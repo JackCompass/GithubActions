@@ -37,7 +37,7 @@ jobs:
         ALLOWED_HOSTS: ${{secrets.ALLOWED_HOSTS}}
       run: |
         python manage.py test
-    -name: deploy to heroku
+    - name: Deploy to Heroku
       env:
         HEROKU_API_TOKEN: ${{secrets.HEROKU_API_TOKEN}}
         HEROKU_APP_NAME: ${{secrets.HEROKU_APP_NAME}}
