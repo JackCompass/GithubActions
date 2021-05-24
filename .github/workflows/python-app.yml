@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+      env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
         ALLOWED_HOSTS: ${{secrets.ALLOWED_HOSTS}}
     - name: Install dependencies
