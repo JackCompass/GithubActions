@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Show</title>
+</head>
+<body>
+	<form action="{% url 'person' %}" method="GET">
+		<input type="text" placeholder="Search with Username" name="person">
+		<button class="form-submit" type="submit" value="submit">Submit</button>
+	</form>
+	{% for entry in query %}
+		<strong>Username</strong> : {{entry.username}}
+		<strong>Age</strong> : {{entry.age}}
+		<br>
+	{% endfor %}
+	<a href="{% url 'index' %}"><button class="return" type="button">Go Back</button></a>
+</body>
+</html>
