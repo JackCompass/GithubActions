@@ -1,1 +1,1 @@
-web: gunicorn approach.wsgi
+web: waitress-serve --port=$PORT approach.wsgi:application
